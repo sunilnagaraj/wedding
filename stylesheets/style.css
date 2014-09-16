@@ -1,0 +1,386 @@
+/* ----------------- General Styles ------------------- */
+
+#notify{
+	display: none;
+}
+
+#error-notify{
+	display:none;
+}
+
+
+.nav-center{
+	overflow:hidden;
+	display: inline-block;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.align-right{
+	text-align:right;
+}
+
+.align-left{
+	text-align: left;
+}
+
+.hidden{
+	display:none;
+}
+
+body{
+	background-image: url('../images/paper.png');
+}
+
+body ul{
+	list-style:none;
+}
+
+img{
+	background-color: #fff;
+}
+
+.fabric-rule{
+	height: 40px;
+	width: 100%;
+	background: url('../images/fabric2.jpg') repeat-x; 
+	/*background-size: 50% 100%;  */
+	padding-top: 3px;
+	color: #fff;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.page-divider{
+	width: 100%;
+	display:block;
+	margin:0px auto;
+	margin-bottom: 15px;
+}
+
+
+.fabric-rule h3{
+	color: #fff;
+}
+
+iframe{
+	width: 100%;
+}
+
+
+
+/* ----------------- Navigation Styles ------------------- */
+
+#main-container{
+	overflow: hidden;
+}
+
+.navigation{
+	z-index: 32;
+	background-color: #fff;
+	width: 100%;
+	-webkit-box-shadow:  0px 0px 4px 3px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 4px 3px rgba(0, 0, 0, 0.3);
+    text-align:center;
+    position: fixed;
+    top: 0px;
+}
+
+
+
+
+/* ----------------- Home Styles ------------------- */
+
+#home-page{
+	/*background:url('../images/sunset_hawaii.jpg'); */
+    background:url('../images/bridge4.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	padding-bottom: 8%;
+	padding-top: 10%;
+	position:relative;
+	overflow:hidden;
+}
+
+.fullscreen-image{
+	width:100%;
+}
+
+#main-title-container{
+	margin:0px auto;
+	text-align:center;
+	color: #fff;
+	width: 100%;
+	position:relative;
+}
+
+#main-title-text{
+	position:relative;
+	background-color: rgba(0,0,0,0.15);
+	padding: 15px;
+	display:inline-block;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.thick-hr{
+	border-top: 10px solid #fff;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#main-title-text h1{
+	font-size: 60px;
+	margin-top:0px;
+}
+
+#main-title-text h2{
+	font-family: 'Petit Formal Script';
+}
+
+#main-title-text span{
+	font-family: 'Petit Formal Script';
+	font-size: 26px;
+}
+
+.kkcount-down{
+	background-color: #fff;
+	color: #000;
+	padding: 10px;
+	margin-bottom: 15px;
+
+}
+
+
+
+#main-title-text h1, #main-title-text h2{
+	color: #fff;
+}
+
+/* ----------------- Our Story Styles ------------------- */
+
+.page-wrapper{
+	padding: 40px;
+}
+
+.page{
+	overflow: hidden;
+	max-width: 700px;
+	margin: 0px auto;
+	background-color: #fff;
+	padding: 50px;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
+}
+
+#story-photo{
+	width: 300px;
+	display:block;
+	margin:0px auto;
+	padding: 10px;
+	border: 1px solid #d8d8d8;
+	-moz-transform: scale(1) rotate(3deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-webkit-transform: scale(1) rotate(3deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1) rotate(3deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1) rotate(3deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    transform: scale(1) rotate(3deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+
+/* Wedding Page */
+
+
+.wedding-wrapper{
+	background:url('../images/fortmason_front.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	padding-bottom: 8%;
+	padding-top: 10%;
+	position:relative;
+	text-align:center;
+}
+
+#wedding-details{
+	margin:0px auto;
+	text-align: center;
+	position:relative;
+	display:inline-block;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px;
+}
+
+#wedding-details h3{
+	color: #fff;
+}
+
+#wedding-details h2{
+	color: #fff;
+	font-family: 'Petit Formal Script';
+}
+
+#wedding-details h1{
+	color: #fff;
+	font-size: 4em;
+}
+
+.wedding-wrapper img{
+	border: 1px solid #c8c8c8;
+	width: 100%;
+	padding: 6px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+	margin-bottom: 15px;
+}
+
+/* ----------------- Visitors Styles ------------------- */
+
+.visitors-photo{
+	width: 30%;
+	display:block;
+	padding: 10px;
+	border: 1px solid #d8d8d8;
+	float:left;
+}
+
+#visitors-list li{
+	border-bottom: 1px solid #d8d8d8;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+
+#visitors-list div{
+	padding-left: 15px;
+	float:right;
+	width: 70%;
+}
+
+#visitors-list h5{
+	margin:0px;
+}
+
+#visitors-list h6{
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+
+/* ----------------- Gallery Styles ------------------- */
+
+#gallery-page img{
+	padding: 10px;
+	border: 1px solid #d8d8d8;
+}
+
+#gallery-page img:hover{
+	background-color: #f0f0f0;
+}
+
+/* ----------------- RSVP Styles ------------------- */
+
+#rsvp-page p{
+	border-bottom: 1px solid #d8d8d8;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+
+#submit-form{
+	margin:0px auto;
+	display: block;
+	border: 1px solid #d8d8d8;
+	font-size: 1em;
+	cursor: pointer;	
+	background-color: #fff;
+	font-family: 'Sintony';
+	padding:10px;
+	margin-top: 20px;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 767px) {
+
+#home-page{
+	background-attachment: scroll;
+}
+
+#main-title-text h1{
+	font-size: 55px;
+}
+
+.seven{
+	margin-bottom: 15px;
+}
+
+#wedding-page{
+	background-attachment: scroll;
+}
+
+.story-wrapper{
+	padding: 0px 10px 0px 10px;
+	height: 600px;
+}
+
+#story-list img{
+	max-height: 250px;
+}
+
+#story-list p{
+	width: 100%;
+}
+
+.page-wrapper{
+	padding: 40px 10px 40px 10px;
+}
+
+
+
+#visitors-list{
+	width: 98%;
+	margin:0px auto;
+}
+
+#visitors-list div{
+	width: 100%;
+}
+
+.visitors-photo{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.page{
+	padding: 30px 20px 30px 20px;
+}
+
+#wedding-details h1{
+	font-size: 35px;
+}
+
+#wedding-details h2{
+	font-size: 30px;
+}
+
+#wedding-details h3{
+	font-size: 22px;
+}	
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+#home-page{
+	background-attachment: scroll;
+}
+
+#wedding-page{
+	background-attachment: scroll;
+}
+
+
+
+}
