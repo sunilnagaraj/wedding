@@ -65,6 +65,7 @@ $(document).ready(function() {
 			var guestsNames = $("#form-guestsNames").val();	
 			var mailAddr = $("#form-mailAddr").val();								
 			var text = $("#form-msg").val();
+			var code = $("#form-code").val();
 			var radio ='';
 			
 		/*	escape(name);
@@ -88,10 +89,34 @@ $(document).ready(function() {
 				$('#error-notify').fadeIn(500);
 				$error = 1;
 				
+			}else{
+				$('#error-notify').fadeOut(100);
+				$error = 0;
+				
 			}
+			
+			
+			// Enforcing registration codes
+			
+			if(radio == "I / We will be attending" &&  !( 
+				(code == "d" && numOfGuests <= "1") || 
+				(code == "e" && numOfGuests <= "2") || 
+				(code == "f" && numOfGuests <= "3") || 
+				(code == "g" && numOfGuests <= "4") || 
+				(code == "h" && numOfGuests <= "5") || 
+				(code == "i" && numOfGuests <= "6") || 
+				(code == "j" && numOfGuests <= "7") || 
+				(code == "k" && numOfGuests <= "8") || 
+				(code == "l" && numOfGuests <= "9")	
+			)){
+				$('#error-notifycode').fadeIn(500);
+				$error = 1;
+				
+			}
+			
 
 			
-			var dataString = 'name=' + name + '&number=' + number + '&emailAddr=' + emailAddr + '&numOfGuests=' + numOfGuests + '&guestsNames=' + guestsNames + '&mailAddr=' + mailAddr + '&text=' + text + '&radio=' + radio;
+			var dataString = 'name=' + name + '&number=' + number + '&emailAddr=' + emailAddr + '&numOfGuests=' + numOfGuests + '&guestsNames=' + guestsNames + '&mailAddr=' + mailAddr + '&text=' + text + '&radio=' + radio + '&code=' + code;
 						
 			if($error == 0){
 				$.ajax({
@@ -100,6 +125,7 @@ $(document).ready(function() {
 					data: dataString,
 					success: function () {
 						$('#error-notify').fadeOut(500);
+						$('#error-notifycode').fadeOut(200);
 						$('#notify').fadeIn(1000);
 					}
 				});

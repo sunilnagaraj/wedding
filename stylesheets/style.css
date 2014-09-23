@@ -8,6 +8,9 @@
 	display:none;
 }
 
+#error-notifycode{
+	display:none;
+}
 
 .nav-center{
 	overflow:hidden;
