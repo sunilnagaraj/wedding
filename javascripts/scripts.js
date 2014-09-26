@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+
+	// For taking query_string regcode and putting that into form field
+	function getQueryVariable(variable)
+	{
+	       var query = window.location.search.substring(1);
+	       var vars = query.split("&");
+	       for (var i=0;i<vars.length;i++) {
+	               var pair = vars[i].split("=");
+	               if(pair[0] == variable){return pair[1];}
+	       }
+	       return(false);
+	}
+
+	invitecode = getQueryVariable("invitecode");
+
+	if (invitecode)
+	{
+//		alert(invitecode);
+		$("#form-code").val(invitecode);
+	}
+
+
+
 	// Smooth scrolling navigation
 
 		$(".scroll").click(function(event){		
@@ -67,24 +90,13 @@ $(document).ready(function() {
 			var text = $("#form-msg").val();
 			var code = $("#form-code").val();
 			var radio ='';
-			
-		/*	escape(name);
-			escape(number);
-			escape(emailAddr);
-			escape(numOfGuests);
-			escape(guestsNames);
-			escape(mailAddr);
-			escape(text); */
-			
-		
-			
 
 			
 			 if($('#radio1').is(':checked')) { radio = 'I / We will be attending'; }
 			 if($('#radio2').is(':checked')) { radio = 'Unfortunately I / We are unable to attend'; }
 			 
-//			 escape (radio);
-		
+			 
+			 // Error if critical fields blank. Otherwise, clear error for second try submits.
 			if(name == "" || emailAddr=="" || radio=="" ){
 				$('#error-notify').fadeIn(500);
 				$error = 1;
@@ -95,19 +107,19 @@ $(document).ready(function() {
 				
 			}
 			
-			
-			// Enforcing registration codes
+			// Enforce registration codes
+			code = code.toLowerCase();
 			
 			if(radio == "I / We will be attending" &&  !( 
-				(code == "d" && numOfGuests <= "1") || 
-				(code == "e" && numOfGuests <= "2") || 
-				(code == "f" && numOfGuests <= "3") || 
-				(code == "g" && numOfGuests <= "4") || 
-				(code == "h" && numOfGuests <= "5") || 
-				(code == "i" && numOfGuests <= "6") || 
-				(code == "j" && numOfGuests <= "7") || 
-				(code == "k" && numOfGuests <= "8") || 
-				(code == "l" && numOfGuests <= "9")	
+				(code == "sam" && numOfGuests <= "1") || 
+				(code == "sbm" && numOfGuests <= "2") || 
+				(code == "scm" && numOfGuests <= "3") || 
+				(code == "sdm" && numOfGuests <= "4") || 
+				(code == "sem" && numOfGuests <= "5") || 
+				(code == "sfm" && numOfGuests <= "6") || 
+				(code == "sgm" && numOfGuests <= "7") || 
+				(code == "shm" && numOfGuests <= "8") || 
+				(code == "sim" && numOfGuests <= "9")	
 			)){
 				$('#error-notifycode').fadeIn(500);
 				$error = 1;
@@ -138,12 +150,6 @@ $(document).ready(function() {
 
 	 
 	 
-
-
-
-
-
-
 
 
 
